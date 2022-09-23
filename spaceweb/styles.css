@@ -48,7 +48,7 @@ body {
 
 .content {
     text-align: justify;
-    padding: 0px 200px;
+    padding: 0 200px 100px 200px;
     font-size: larger;
     text-shadow: 0 0 5 black;
     line-height: 2;
@@ -63,4 +63,10 @@ body {
     border: 5px solid silver;
     border-radius: 20px;
 
+}
+
+#appreciation{
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bolder;
 }
