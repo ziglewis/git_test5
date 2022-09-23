@@ -48,7 +48,7 @@ body {
 
 .content {
     text-align: justify;
-    padding: 0 200px 100px 200px;
+    padding: 0 80px 100px 80px;
     font-size: larger;
     text-shadow: 0 0 5 black;
     line-height: 2;
@@ -56,10 +56,10 @@ body {
 }
    
 .images {
-    text-align: center;
-    display: block;
+    text-align:center;
+    display:block;
     margin: 50px auto;
-    width: 800px;
+    width: 80%;
     border: 5px solid silver;
     border-radius: 20px;
 
