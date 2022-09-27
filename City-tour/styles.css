@@ -1,0 +1,180 @@
+
+
+.body-all {
+    border: 10px solid rgb(24, 24, 233);
+    border-radius: 10px;
+    margin: 0px auto 10px;
+    width: fit-content;
+    background-color: rgb(117, 117, 241);
+
+}
+
+.top {
+    background-image: url(images/Aba-2.jpeg);
+    background-size: cover;
+    height: 500px;
+    color: whitesmoke;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    }
+
+    .top:hover {
+        background-image: url(images/Aba.jpeg);
+    background-size: cover;
+    height: 550px;
+
+    }
+
+    .btn {
+        margin-top: 20px;
+        height: 30px;
+        border-radius: 30px;
+        border: 3px solid red;
+    }
+
+    .btn:hover {
+        height: 40px;
+        border: 3px solid red;
+
+    }
+
+    
+    #theme {
+            width: fit-content;
+            padding: 4px 10px;
+            border-radius: 10px;
+            background-color:rgb(117, 117, 241);
+            text-shadow: 0 0 5px black;
+             }
+
+    .theme-add {
+
+            width: fit-content;
+            padding: 4px 10px;
+            border-radius: 10px;
+            margin: 0px;
+            background-color: rgb(117, 117, 241);
+            text-shadow: 0 0 5px black;
+                }
+
+        .middle-top-three-img {
+            width: 400px;
+            height: 400px;
+            border-radius: 50%;
+
+        }
+
+        .middle-top-three-img:hover{
+            width: 450px;
+            height: 450px;
+
+        }
+
+        .tour-img {
+
+            width: 300px;
+        
+        }
+
+       .middle-theme {
+        text-align: center;
+        background-color: rgb(117, 117, 241);
+        border-top: 2px solid whitesmoke;
+        border-bottom: 2px solid whitesmoke;
+        color: whitesmoke;
+        margin: 0 0 0px;
+        height: 70px;
+        padding-top: 35px;
+        text-shadow: 0 0 5px black;
+        width: 1450px;
+
+        }
+
+        .middle-theme:hover {
+            height: 100px;
+            font-size: xx-large;
+        }
+
+        .stadium {
+            text-align: center;
+            width: 450px;
+        }
+
+        .middle-text-one {
+            font-size: larger;
+            font-weight: bold;
+        }
+
+        .middle-top-three {
+            display: flex;
+            justify-content: space-around;
+            background-color: rgb(133, 133, 240);
+            margin: 0 auto;
+            padding-top: 50px;  
+            padding-bottom: 40px;  
+            color: whitesmoke;
+            text-shadow: 0 0 5px black;
+            border-bottom: 2px solid whitesmoke;
+              
+        }
+
+        .bottom {
+
+            display: flex;
+            padding: 20px;
+            width: fit-content;
+            border: 5px solid greenyellow ;
+            background-color: brown;
+            border-radius: 10px;
+        }
+
+        .tour-text {
+                text-align: center;
+                width: 250px;
+                padding: 30px 50px;
+                
+        }
+
+        .tour-text-center {
+            margin: 100px 0;
+            text-align: justify;
+        
+        }
+
+        #email {
+            margin-top: 0;
+            font-style: italic;
+        }
+        
+        .his-img {
+            width: 450px;
+            height: 500px;
+        }
+
+        .his{
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: left;
+            border: 5px solid greenyellow;
+            width: fit-content;
+            background-color: brown;
+            border-radius: 10px;
+
+        
+        }
+        .add {text-align: center;
+            
+        }
+        .base {
+            display: flex;
+            justify-content: space-around;
+            margin: 100px 0px 100px;
+        }
+
+       
+    
