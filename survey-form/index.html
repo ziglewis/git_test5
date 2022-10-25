@@ -1,0 +1,145 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name= "viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content= "here we go again" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="styles.css" />
+ 
+  <title>
+    YPF Anambra Survey Form       
+    </title>
+  </head>
+
+  <body>
+    <main>
+    <header>
+        <h1 class="caption"> YOUNG PROFESSIONALS FORUM SURVEY FORM</h1>
+        <img class="logo" src="images/ypf-logo.jpg" width="50px" alt="Young professionals forum logo" />
+        <h3 class="form-explainer"> <i>Please kindly help us fill out this form with all sincerity to help us improve, thank you.</i></h3>
+    </header>
+
+    <section>
+        <div class="container">
+
+
+            <fieldset>
+
+                <form id="survey-form" action="ziglewis48@gmail.com" method="get">
+                    <label value="name" for="name">
+                        Name
+                        <input type="text"  required placeholder="Enter your full name"  id="name"/>
+                    </label>
+                   
+                    <label for="email" value="email">
+                        Email
+                        <input type="email" required placeholder="Enter your Email"  id="email" />
+
+                    </label>
+
+                    <label for="age" value="age">
+                        Age (optional)
+                    <input type="number" required max="40" min="20" title="only ages 20 to 40 can fill this form"  id="age" placeholder="Input your age" />
+                        
+                    </label>
+                </fieldset>
+
+
+
+                <fieldset>
+                       <p>What is your professional class?</p>
+                        <select id="profession">
+                            <option value=""disabled selected hidden>Choose which best describes you</option> 
+                            <option value="Civil-Service">Civil Service</option> 
+                            <option value="Self-Employed">Self Employed</option> 
+                            <option value="Cooperate-staff">cooperate Office staff</option> 
+                            <option value="Undergraduate">Undergraduate</option> 
+                            <option value="SSCE">x-Student-SSCE</option>
+                            <option value="NYSC">Corp-Member</option>  
+                            <option value="Apprentice">Apprentice</option> 
+                            <option value="Unemployed">Unemployed</option> 
+                        </select>
+                </fieldset>
+
+                <fieldset>
+                    
+                            <p>Would you recommend YPF to your friends and professional colleagues? </p>
+                            <label for="definitely"><input type="radio" value="definitely" name="recommendation" id="definitely" checked />Definitely</label>
+                            <label for="never"><input type="radio" value="never" name="recommendation" id="never">Never</label>
+                            <label for="maybe"> <input type="radio" value="maybe" name="recommendation" id="maybe">Maybe</label>
+                            <label for="not-sure"><input type="radio" value="Not-sure" name="recommendation" id="not-sure">Not Sure</label>
+
+                </fieldset>
+
+              
+              
+                <fieldset>
+                   
+                    <p>What topic most interests you in the YPF?</p>
+                    <select id="most-interested-topic">
+                        <option value="" disabled selected hidden>Select an option</option>
+                        <option value="relationship">Relationship</option>
+                        <option value="tech">Tech</option>
+                        <option value="work-ethics">Professional Work Ethics</option>
+                        <option value="business">Business</option>
+                        <option value="prayer-and-gospel">Prayer and gospel</option>
+                        <option value="Academics">Academics</option>
+                        <option value="all">All of the above</option>
+                        <option value="none">None of the above</option>
+                    </select>
+
+             </fieldset>
+
+
+
+             <fieldset>
+                <p>What would you like to see improved in the YPF? (Check all that apply)</p>
+                <label for="discuss-time" > <input type="checkbox" value="discuss-time" id="discuss-time" /> Discuss Time </label>
+                <label for="discuss-quality"> <input type="checkbox" value="discuss-quality" id="discuss-quality"/>Discuss Quality </label>
+                <label for="wednesday-prayer-time"> <input type="checkbox" value="wednesday-prayer-time" id="wednesday-prayer-time" />Wednesday Prayer Time</label>
+                <label for="wednesday-prayer-tempo"> <input type="checkbox" value="wednesday-prayer-tempo" id="wednesday-prayer-tempo" />Wednesday Prayer Tempo</label>
+                <label for="Meetup-time" > <input type="checkbox" value="meetup-time" id="meetup-time" /> Meetup Time </label>
+                <label for="Meetup-venue" > <input type="checkbox" value="meetup-venue" id="meetup-venue" /> Meetup Venue </label>
+                <label for="online-broadcast" > <input type="checkbox" value="online-broadcast" id="online-broadcast" /> Online Broadcast </label>
+                <label for="Mentorship" > <input type="checkbox" value="Mentorship" id="Mentorship" /> Mentorship </label>
+                <label for="Visitation-and-call" > <input type="checkbox" value="Visitation-and-call" id="Visitation-and-call" /> Visitation and Call checkup</label>
+                <label for="transport-arrangement" > <input type="checkbox" value="transport-arrangement" id="transport-arrangement" /> Transport arrangement </label>
+                <label for="refreshment" > <input type="checkbox" value="refreshment" id="refreshment" /> Refreshment </label>
+                <label for="skill-acquisition" > <input type="checkbox" value="skill-acquisition" id="skill-acquisition" /> Skill Acquisition </label>
+
+
+             </fieldset>
+
+
+
+             <fieldset>
+
+                <p>Any other comments or suggestions</p>
+                <input type="textarea" id="comments" placeholder="Enter your comments here..." rows="6" cols="30"/>
+
+             </fieldset>
+
+
+             <fieldset>
+                
+                        <input type="submit" value="CLICK TO SUBMIT" id="submit-btn">
+
+             </fieldset>
+
+
+                </section>
+                </form>
+
+                <footer>
+                    <marquee>This survey-form was designed by Zigede Lewis for the Young Professional Forum Anambra-1 in partial fulfillment of my Responsive Web Development Certification from Free Code Camp, thank you for filling it out. (Ziglewis48@gmail.com).</marquee>
+                </footer>
+
+        </div>
+
+    </main>
+  </body>
+
+  </html>
