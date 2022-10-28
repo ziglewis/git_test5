@@ -1,0 +1,114 @@
+main{
+    text-align: center;
+    justify-content:center;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0%;
+    width: 100%;
+    padding-top: 30px;
+    background-image: url(images/wood5.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    top: 0%;
+    left: 0%;
+    right: 0%;
+    
+
+  
+    
+}
+
+.early-life, .evangelism, .last-days {
+    width: 700px;
+    text-align: justify;
+    line-height: 2;
+    padding: 10px 100px;
+    margin: 5px auto;
+    background-color: rgba(158, 162, 165);
+   
+}
+
+section{
+    border: 5px solid ghostwhite;
+    border-radius: 20px;
+    width: 1300px;
+    background-color: rgb(149, 156, 161);
+   
+    margin: 5px auto;
+}
+
+hr{
+    height: 2px;
+    background-color: ghostwhite;
+}
+
+#caption {
+    color: ghostwhite;
+    font-size: larger;
+    font-weight: bold;
+    text-shadow: 0px 0px 4px black;
+    width: 80vw;
+    margin: auto;
+}
+
+#logo{
+    position: absolute;
+    top: 3%;
+    left: 3%;
+}
+a{
+    text-decoration: none;
+    color: ghostwhite;
+    text-shadow: 0px 0px 4px black
+
+}
+
+span{
+    text-decoration: wavy;
+    font-weight: bolder;
+}
+
+marquee{
+    width: 78%;
+    margin: auto;
+}
+
+footer{
+
+    width:60%;
+    color: ghostwhite;
+    text-shadow: 0px 0px 4px black;
+    margin:20px auto;
+    border: 2px solid rgba(158, 162, 165);
+    background-color: rgb(149, 156, 161);
+    border-radius:20px;
+
+
+}
+
+footer:hover{
+    background-color:rgb(115, 118, 121);
+
+}
+
+
+@media (max-width:1300px) {
+
+
+    .early-life, .evangelism, .last-days, .video, section, main{
+
+        
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        overflow:hidden;
+        margin: 0%;
+        padding: 10px 10px;
+        box-sizing: border-box;
+
+        
+    }  
+
+   
+}
