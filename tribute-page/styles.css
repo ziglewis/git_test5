@@ -95,7 +95,7 @@ footer:hover{
 @media (max-width:1300px) {
 
 
-    .early-life, .evangelism, .last-days, .video, section, main{
+    .early-life, .evangelism, .last-days, .video, section{
 
         
         width: 100%;
@@ -106,9 +106,39 @@ footer:hover{
         margin: 0%;
         padding: 10px 10px;
         box-sizing: border-box;
+        border-left: none;
+        border-right: none;
 
         
     }  
+
+main{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    overflow:hidden;
+    margin: 0%;
+    border: none;
+    box-sizing: border-box;
+
+}
+
+#profile-pictures{
+
+    width: 100%;
+
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        overflow:hidden;
+        margin: auto;
+        
+        box-sizing: border-box;
+       
+}
+
 
    
 }
