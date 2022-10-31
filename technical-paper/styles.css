@@ -1,5 +1,7 @@
 .main{
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    margin: 0%;
+    box-sizing: border-box;
 }
 
 .menu {
@@ -15,6 +17,7 @@
     height: 50px;
     margin: auto;
     background-color: aliceblue;
+    border-radius: 5px;
    
 }
 
@@ -166,7 +169,7 @@ footer{
 .caption{
     height: auto;
     font-size: 12px;
-    padding: 2%;
+    padding: 0% 2%;
 }
 .content h2{
     padding-top: 60%;
