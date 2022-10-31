@@ -166,10 +166,10 @@ footer{
 .caption{
     height: auto;
     font-size: 12px;
-    padding: 0%;
+    padding: 2%;
 }
 .content h2{
-    padding-top: 220px;
+    padding-top: 60%;
 }
 br{
     display: none;}
