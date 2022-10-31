@@ -1,4 +1,4 @@
-.main{
+main, body{
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     margin: 0%;
     box-sizing: border-box;
@@ -159,20 +159,21 @@ footer{
 .content{
     width: 100%;
     position : relative;
-    padding: 0%;
+    padding: 0% 1%;
     left: 0%;
+
     
 
     box-sizing: border-box;
     
 }
 .caption{
-    height: auto;
     font-size: 12px;
     padding: 0% 2%;
+    width: 100%;
 }
 .content h2{
-    padding-top: 60%;
+    padding-top: 65%;
 }
 br{
     display: none;}
