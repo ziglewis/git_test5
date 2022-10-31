@@ -146,7 +146,7 @@ footer{
         box-sizing: border-box;
         overflow: auto;
         z-index: 3;
-        padding: 0%;
+        padding: 0% 2px;
         margin: 0%;
         background-color: white;
         line-height: 0%;
@@ -159,7 +159,7 @@ footer{
 .content{
     width: 100%;
     position : relative;
-    padding: 0% 1%;
+    padding: 0% 2px;
     left: 0%;
 
     
@@ -173,7 +173,7 @@ footer{
     width: 100%;
 }
 .content h2{
-    padding-top: 65%;
+    padding-top: 70%;
 }
 br{
     display: none;}
