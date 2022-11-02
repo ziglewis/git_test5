@@ -1,0 +1,324 @@
+
+body{
+    text-align: center;
+    margin: 0%;
+    box-sizing: border-box;
+    background-color: goldenrod;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    
+   
+}
+
+
+.logo{
+    display: flex;
+    gap: 10px;
+    margin:auto;
+    width: 50%;
+    
+    padding: auto;
+    
+}
+.logo p{
+    margin:auto 0px;
+    font-weight: bolder;
+     font-size: larger;
+     font-style: italic;
+}
+
+.links{
+    display: flex;
+    
+     width: 300px;
+     justify-content:space-between;
+     font-size: larger;
+     font-weight: bolder;
+   
+   
+      height: 50px;
+     margin: auto;      
+  
+}
+
+.nav-bar{
+   padding: 0px 5px;
+    
+    margin: auto 0px;
+    
+    
+
+}
+
+
+
+.top-bar{
+    display: flex;
+   padding: 20px;
+   width: 100%;
+   height: fit-content;
+   
+   
+    margin: 0%;
+    box-sizing: border-box;
+   
+    background-color: rgb(231, 182, 56);
+    position: fixed;
+    z-index: 3;
+    top: 0px;
+
+    
+}
+
+main{
+    position: absolute;
+    margin: 150px auto 20px;
+   
+    width: 100%;
+    box-sizing: border-box;
+    flex-wrap: wrap;
+    object-fit: contain;
+
+    
+
+
+    
+    
+}
+
+
+input{
+    display:block;
+    margin: 20px auto ;
+}
+
+input[type=email]{
+
+    height: 30px;
+    width: 350px;
+   
+    background-color: ghostwhite;
+}
+
+input[type=submit]{
+
+    height: 35px;
+    width: 150px;
+    background-color: black;
+    color: rgb(231, 182, 56);
+    border: 4px solid black;
+   
+    border-radius: 20px;
+    font-size: larger;
+    font-weight: bold;
+}
+
+input[type=submit]:hover{
+   
+   
+    background-color: ghostwhite;
+    color: black;
+   
+}
+
+.sub-part{
+    display:flex;
+    margin: 40px auto;
+    padding: 5px 20%;
+}
+
+.icon-img{
+    margin: auto 0px;
+}
+
+
+.icon-words{
+    padding-left: 50px;
+    text-align: left;
+    
+
+}
+
+.icon-words h3{
+    font-weight:bold ;
+
+}
+
+
+
+.video iframe {
+    width: 50%; 
+    height: 400px;
+    min-width: 500px;
+
+}
+
+.display-goods{
+    border: 5px solid black;
+    width: calc(100%/3.5);
+    min-width: 200px;
+    max-width: 300px;
+    display: block;
+    text-align: center;
+}
+
+.display-goods h3{
+    display: block;
+    background-color:rgb(231, 182, 56) ;
+    margin: 0%;
+    max-width: 100%;
+    font-weight: bold;
+    padding: 20px 2px;
+    line-height: 1.5;
+
+}
+
+.display-goods img{
+    width: 100%;
+    min-width: 200px;
+    height: 150px;
+    object-fit:cover;
+    background-repeat: no-repeat;
+    
+}
+.display-goods h4{
+    font-weight: bold;
+}
+
+button{
+    margin-bottom: 15px;
+    width:100px;
+    height: 40px;
+    background-color: rgb(231, 182, 56);
+    font-weight:bolder;
+    font-size: larger;
+    
+
+}
+
+
+button:hover{
+    background-color: rgb(165, 129, 39);
+}
+
+div#third-part{
+    width: auto;
+    max-width: 1400px;
+    display: flex;
+    flex-direction: row;
+    
+    
+    gap: 16px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 40px auto;
+    padding: 10px 10px;
+}
+
+div.end-one{
+    display:flex;
+flex-direction: row;
+    gap: 10px;
+    justify-content: right;
+    padding-right: 20px;
+}
+
+#end{
+    justify-content: right;
+    text-align: right;
+    width: 80%;
+    padding: 10px 5px ;
+
+    margin: auto;
+    line-height: 0%;
+    font-size: smaller;
+    background-color: rgb(231, 182, 56);
+    height: 60px;
+   
+}
+
+a{
+    text-decoration:none;
+    color: black;
+}
+
+@media (max-width:700px){
+    .top-bar{
+        display: block;
+        margin: 0%;
+        padding: auto;
+       
+}
+
+div#third-part{
+    flex-direction: column;
+    align-items: center;
+    margin:0%;
+    padding: auto;
+    width: 100%;
+    margin: 0%;
+    padding: 10px 3px;
+    gap: none;
+    
+
+}
+
+.video iframe {
+    width: 100%;
+    min-width: 90%;
+    padding: 3%;
+    height: 250px;
+    
+}
+.display-goods img{
+    width: 100%;
+}
+.sub-part{
+    display:block;
+    margin:auto;
+    padding: 0px 3px;
+    width: 100%;
+    
+
+}
+.icon-img{
+    display: none;}
+
+    .top{
+        width: 100%;
+        padding: 0px 3px;
+        
+    }
+    main{
+       
+        margin: 150px 0% 20px;
+       
+        width: 100%;
+        
+
+}
+.display-goods{
+    border: 5px solid black;
+    width: 300px;
+    min-width: 200px;
+    max-width: none;
+    
+}
+    
+*{
+    box-sizing: border-box;
+}
+
+.logo {
+    margin: auto;
+  width:fit-content;
+  font-size: larger;
+
+}
+
+.nav-bar{
+    font-weight: lighter;
+    font-size: smaller;
+   
+
+}
+}
