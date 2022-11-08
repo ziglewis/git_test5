@@ -78,6 +78,7 @@
 main{
     position: absolute;
     text-align: center;
+   
     
    
     background-color: #e5e5e5;
@@ -102,6 +103,7 @@ main{
 
 .intro h2{
     font-size: 1.5rem;
+    
     
    
 }
@@ -531,7 +533,8 @@ input[type=submit]:hover{
 
 .intro{
     margin: 0%;
-    padding: 4%;
+    padding: 15% 4% 4% 4%;
+
 }
 
 }
