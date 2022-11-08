@@ -100,15 +100,15 @@ main{
     text-align: justify;
 }
 
-.intro h1{
-    font-size:40px;
+.intro h2{
+    font-size: 1.5rem;
     
    
 }
 
-.intro h2{
- color: black;
-    line-height: 2;
+.intro h3{
+ 
+    line-height: 1.5;
 
    
 }
