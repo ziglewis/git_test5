@@ -117,8 +117,8 @@ main{
 
 @keyframes slide {
 
-   0%{margin-left: -40%}
-   80%{margin-left: 80%}
+   0%{margin-left: -50%}
+   
    100%{margin-left: 0px}
 
     }
