@@ -206,8 +206,8 @@ main{
 }
 
 .project2-img{
-    padding: 50px 30px;
-    background-color: brown;
+    padding: 30px 20px;
+    background-color: #e5e5e5;
     width: calc(90% / 2.2%);
     border-radius: 15px;
 }
@@ -220,8 +220,8 @@ main{
 }
 
 .project3-img{
-    padding: 50px 50px;
-    background-color: brown;
+    padding: 20px 20px;
+    background-color: #e5e5e5;
     width: calc(90% / 2.2%);
     border-radius: 15px;
 }
@@ -236,7 +236,7 @@ main{
 }
 
 .project4-img{
-    padding: 50px 30px;
+    padding: 30px 10px;
     background-color: rgb(15, 15, 43);
     width: calc(90% / 2.2%);
     border-radius: 15px;
