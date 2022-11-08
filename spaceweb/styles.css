@@ -39,6 +39,16 @@ body {
     color: silver;
     font-weight: 800;
     border: 3px solid  silver;
+    border-radius: 5px;
+}
+.btn:hover{
+    background: #F6E7E7;
+
+}
+
+a{
+    text-decoration: none;
+    color: rgb(37, 36, 36);
 }
 
 .underline {
@@ -69,4 +79,15 @@ body {
     color: white;
     font-family: 'Times New Roman', Times, serif;
     font-weight: bolder;
+}
+
+
+@media (max-width: 900px){
+
+    .content {
+        text-align: justify;
+        padding: 0 3% 100px 3%;
+        font-size:medium;
+
+}
 }
