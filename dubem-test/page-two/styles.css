@@ -1,0 +1,135 @@
+
+* {
+    padding: 0;
+    margin: auto;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+body {
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(14, 13, 13);
+}
+a {
+    color: white;
+    text-decoration: none;
+}
+
+.formpage{
+    width: 700px;
+    height: 100vh;
+    margin: 0px auto;
+    background-color:ghostwhite;
+    padding: 4%;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+
+
+.logo img{
+    width: 15%; 
+}
+
+
+.formpage h1{
+    font-size: 2.5rem;
+    font-weight: bold;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    text-align: center;
+}
+
+hr {
+    border-style: solid;
+    opacity: 0.1;
+}
+
+.input-info {
+    display: flex;
+    font-size: 2.5vmin;
+}
+
+input {
+    width:  100%;
+    margin-top: 20px;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-right: 0cm;
+    border-left: 0cm;
+    border-top: 0cm; 
+    font-size: 2.5vmin;
+    
+}
+.signup-container {
+    font-size: 2.5vmin;
+
+}
+button {
+    width:  100%;
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 20px;
+    background-color:#55cf4b;
+    color: white;
+    font-size: 20px;
+    border: none;
+    cursor: pointer;
+}
+button:hover {
+    background-color: #3ce4cf;
+    transition: all 0.5s;
+}
+.signup {
+    margin-top: 20px;
+    text-align: center;
+}
+.signup a{
+    color: blue;
+    text-decoration: none;
+}
+
+.lower-section{
+    display:flex;
+    justify-content: space-between;
+}
+
+.next button, .Back button{
+    width:fit-content;
+    padding: 10px 40px;
+}
+
+.icons {
+    font-size: 48px;
+    margin-top: 30px;
+    text-align: center;
+}
+.facebook a i{
+    color: blue;
+}
+.twitter a i {
+    color: rgb(20, 120, 212);
+}
+.google a i{
+    color: rgb(164,  35, 29);
+}
+
+
+@media (max-width: 700px){
+
+    .formpage{
+        width: 100%;
+        padding: 2%;
+    
+    }
+}
+
+@media (max-height: 605px){
+
+    .formpage{
+        overflow-y: scroll;
+    
+    }
+
+
+    }
