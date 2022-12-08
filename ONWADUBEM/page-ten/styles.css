@@ -21,7 +21,7 @@ body{
 }
 
 .screen{
-    height: 33%;
+    height: 40%;
     box-sizing: border-box;
     display: flex;
     justify-content: center;
@@ -32,7 +32,7 @@ body{
 main{
     background-color: ghostwhite;
     box-sizing: border-box;
-    height: fit-content;
+    height: auto;
     width: 700px;
     text-align:center;
     display: flex;
@@ -53,7 +53,7 @@ main img{
 }
 
 .content {
-    height: fit-content;
+    height: auto;
     width: 97%;
     border-top-right-radius:50px ;
     box-sizing: border-box;
@@ -74,7 +74,7 @@ main img{
 
 
 button{
-    margin: 0px auto 7%;
+    margin: 0px auto 5%;
     width: 30%;
 
     border-radius: 10px;
