@@ -67,6 +67,8 @@ main img{
 .text{
     margin: 4% 0%;
     font-weight: bold;
+    line-height: 1.5;
+    font-size: larger;
 }
 
 
@@ -102,7 +104,7 @@ button{
 }
 }
 
-@media (max-height: 490px){
+@media (max-height: 600px){
 
     main{
         overflow-x: scroll;

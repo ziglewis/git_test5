@@ -32,7 +32,7 @@ body{
 main{
     background-color: ghostwhite;
     box-sizing: border-box;
-    height: 100%;
+    height: fit-content;
     width: 700px;
     text-align:center;
     display: flex;
@@ -52,7 +52,7 @@ main img{
 }
 
 .content {
-    height: 70%;
+    height: fit-content;
     width: 97%;
     border-top-right-radius:50px ;
     box-sizing: border-box;
@@ -64,12 +64,15 @@ main img{
 .text{
     margin: 4% 0% 10%;
     font-weight: bold;
+    line-height: 1.5;
+    font-size: larger;
+    padding: 1%;
 }
 
 .text dl{
     text-align: left;
     line-height: 1.5;
-    padding-left: 3%;
+    
 }
 
 .text dl dt{

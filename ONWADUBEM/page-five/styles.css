@@ -69,6 +69,8 @@ main img{
 .text{
     margin: 4% 0%;
     font-weight: bold;
+    font-size: larger;
+    line-height: 1.5;
 }
 
 
@@ -77,12 +79,18 @@ button{
     margin: 1% auto;
     width: 18%;
     padding: 0px;
+    font-size: smaller;
 
     border-radius: 10px;
     font-weight:bold;
     color: #55cf4b;
     border: none;
     background-color: ghostwhite;
+
+}
+
+.btn h3{
+font-size: smaller;
 
 }
 
@@ -104,7 +112,7 @@ button{
 }
 }
 
-@media (max-height: 490px){
+@media (max-height: 600px){
 
     main{
         overflow-x: scroll;

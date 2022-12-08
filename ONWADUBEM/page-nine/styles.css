@@ -54,7 +54,7 @@ main img{
 }
 
 .content {
-    height: 65%;
+    height: fit-content;
     width: 97%;
     border-top-right-radius:50px ;
     box-sizing: border-box;
@@ -66,12 +66,15 @@ main img{
 .text{
     margin: 4% 0% 10%;
     font-weight: bold;
+    font-size: larger;
+    line-height: 1.5;
+    padding: 1%;
 }
 
 
 
 button{
-    margin: 10% auto;
+    margin: 15% auto 3%;
     width: 30%;
 
     border-radius: 10px;
@@ -100,12 +103,15 @@ button{
 }
 }
 
-@media (max-height: 430px){
+@media (max-height: 650px){
 
     main{
         overflow-x: scroll;
     
     }
+.content{
+    height: fit-content;
+}
 
 
     }

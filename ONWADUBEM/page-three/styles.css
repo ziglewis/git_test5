@@ -63,12 +63,16 @@ main img{
 .text{
     margin: 4% 0% 10%;
     font-weight: bold;
+    line-height: 1.5;
+    font-size: larger;
+    padding: 2%;
+
 }
 
 
 
 button{
-    margin: 10% auto;
+    margin: 20% auto 5%;
     width: 30%;
 
     border-radius: 10px;
@@ -97,12 +101,19 @@ button{
 }
 }
 
-@media (max-height: 430px){
+@media (max-height: 600px){
 
     main{
         overflow-x: scroll;
     
     }
 
-
+    .content{
+        height: fit-content;
     }
+
+    
+    }
+
+
+    

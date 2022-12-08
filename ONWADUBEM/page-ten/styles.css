@@ -32,7 +32,7 @@ body{
 main{
     background-color: ghostwhite;
     box-sizing: border-box;
-    height: 100%;
+    height: fit-content;
     width: 700px;
     text-align:center;
     display: flex;
@@ -53,7 +53,7 @@ main img{
 }
 
 .content {
-    height: 65%;
+    height: fit-content;
     width: 97%;
     border-top-right-radius:50px ;
     box-sizing: border-box;
@@ -63,9 +63,13 @@ main img{
 }
 
 .text{
-    margin: 4% 0% 10%;
+    margin: 4% 0% 5%;
     font-weight: bold;
+    line-height: 1.5;
+    font-size: larger;
+    padding: 1%;
 }
+
 
 
 
@@ -84,6 +88,9 @@ button{
 button:hover{
     color: ghostwhite;
     background-color: #3ce4cf;
+}
+.btn h3{
+    font-size: smaller;
 }
 
 @media (max-width: 700px){

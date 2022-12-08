@@ -58,7 +58,7 @@ body{
 main{
     background-color: ghostwhite;
     box-sizing: border-box;
-    height: 100%;
+    height: fit-content;
     width: 700px;
     text-align:center;
     display: flex;
@@ -78,7 +78,7 @@ main img{
 }
 
 .content {
-    height: 27%;
+    height:fit-content;
     width: 97%;
     border-top-right-radius:50px ;
     box-sizing: border-box;
@@ -89,8 +89,11 @@ main img{
 }
 
 .text{
-    margin: 4% 0%;
+    margin: 4% 0% 1%;
     font-weight: bold;
+    line-height: 1.5;
+    font-size: larger;
+    padding: 1%;
 }
 
 
@@ -105,6 +108,7 @@ button{
     color: #55cf4b;
     border: none;
     background-color: ghostwhite;
+    margin-bottom: 3%;
 
 }
 

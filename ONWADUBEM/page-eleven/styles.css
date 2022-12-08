@@ -62,12 +62,14 @@ main img{
     background-color: #55cf4b;
     margin: auto;
     color: ghostwhite;
+    
 }
 
 .text{
     margin: 4% 0% 10%;
     font-weight: bold;
-    line-height: 2;
+    font-size: larger;
+    line-height: 1.5;
 }
 
 .text ul{

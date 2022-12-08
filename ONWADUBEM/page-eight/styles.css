@@ -66,6 +66,8 @@ main img{
 .text{
     margin: 4% 2% 10%;
     font-weight: bold;
+    font-size: larger;
+    line-height: 1.5;
 }
    
 
@@ -79,7 +81,7 @@ main img{
 
 
 button{
-    margin: 10% auto;
+    margin: auto;
     width: 30%;
 
     border-radius: 10px;
@@ -108,11 +110,14 @@ button{
 }
 }
 
-@media (max-height: 430px){
+@media (max-height: 650px){
 
     main{
         overflow-x: scroll;
     
+    }
+    .content{
+        height: fit-content;
     }
 
 
