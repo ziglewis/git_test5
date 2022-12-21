@@ -1,0 +1,170 @@
+
+
+
+
+*{
+    text-align: center;
+    justify-content: center;
+    color: white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-shadow: 0px 0px 1px black;
+    
+}
+
+main{
+    width: 700px;
+    margin: auto;
+    border: 4px solid ghostwhite;
+    background-image: url("back-33.jpg");
+    opacity: 0.9;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+
+#title{
+    margin: 2% auto;
+}
+
+.top-screen {
+    display: flex;
+    gap: 3%
+}
+
+.men-screen, .women-screen {
+
+    width: calc(100% /2.2);
+    margin: auto;
+    
+}
+
+#men-count, #women-count {
+    font-size:2rem;
+    font-weight: bolder;
+    
+}
+
+#previous-men-count, #previous-women-count{
+
+    width: 70%;
+    height: 5rem;
+    border:2px solid black;
+    text-align: left;
+    margin: auto;
+    border-radius: 10px;
+    background-color: ghostwhite;
+    opacity: 0.9;
+    padding: 2%;
+    overflow-y: auto;
+    color: black;
+
+}
+
+.increment-btns, .decrement-btns {
+    
+    display: flex;
+    flex-direction: row;
+    align-content:space-around;
+    margin: 4% 1%;
+    gap: 3%;
+}
+
+#Save-men-women-btn{
+    margin: 2% auto;
+    width: 50%;
+    background: linear-gradient(rgb(192, 185, 185),rgb(12, 11, 11), rgb(192, 185, 185));
+    height: 3.5rem;
+    border-radius: 30px;
+    border: 3px solid ghostwhite;
+    font-size: larger;
+    font-weight: bolder;
+}
+
+#Save-men-women-btn:hover{
+    background: linear-gradient(rgb(192, 185, 185), rgb(226, 221, 221));
+}
+
+#men-increase-btn, #women-increase-btn {
+
+    width: calc(100% /2.3);
+    background: linear-gradient(rgb(12, 11, 11), rgb(192, 185, 185));
+    height: 5rem;
+    border-radius: 30px;
+    border: 2px solid ghostwhite;
+    font-size: larger;
+    font-weight: bolder 
+
+
+}
+
+#men-increase-btn:hover, #women-increase-btn:hover, #men-decrease-btn:hover, #women-decrease-btn:hover{
+    background: linear-gradient(rgb(192, 185, 185), rgb(226, 221, 221));
+   
+}
+
+#men-decrease-btn, #women-decrease-btn {
+
+    width: calc(100% /2.3);
+    background: linear-gradient(rgb(192, 185, 185),rgb(12, 11, 11) );
+    height: 3.5rem;
+    border-radius: 30px;
+    border: 2px solid ghostwhite;
+    font-size: larger;
+    font-weight: bolder 
+
+}
+
+.total{
+    display: flex;
+    gap: 3%;
+
+}
+
+#men-total, #women-total {
+
+    width: calc(100% /3);
+    margin: auto;
+    
+
+}
+#men-and-women-total{
+
+    width: calc(100% /2.5);
+    margin: auto;
+   
+
+}
+
+fieldset{
+    border:2px solid rgb(83, 83, 85);
+    border-radius: 10px;
+}
+
+#remarks {
+    height: 6rem;
+    width: 90%;
+    margin: auto;
+    text-align: left;
+    padding: 2%;
+    border:2px solid black;
+    border-radius: 10px;
+    color: black;
+
+
+
+}
+
+.social-icons {
+    display: flex;
+    gap: 3%;
+    margin-bottom: 3%;
+}
+
+@media (max-width:700px){
+
+    main{
+        width: 100%;
+        margin: 0px;
+        box-sizing: border-box;
+}
+}

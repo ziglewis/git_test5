@@ -1,0 +1,157 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name= "viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content= "Counting app for attendance" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"/>
+
+  
+
+  <title>
+        Counting App for two groups.
+    </title>
+  </head>
+
+
+  <main>
+
+  <body>
+    
+
+  <h1 id="title">
+    ALL PURPOSE DUAL COUNTING APP
+  </h1>
+
+  <section class="top-screen">
+            <div class="men-screen">
+                <h1 id="men" contenteditable="true"> MEN </h1>
+                <h1 id="men-count" >
+                    0</h1>
+                <p id="previous-men-count"> Previous counts: </p>
+            
+            </div>
+
+
+            <div class="women-screen">
+                <h1 id="womemen" contenteditable="true"> WOMEN </h1>
+                <h1 id="women-count">0</h1>
+                <p id="previous-women-count"> Previous counts: </p> 
+            </div>
+  </section>
+
+
+  <hr>
+  <section>
+            <div class="increment-btns">
+                <button id="men-increase-btn" onclick="incrementMen()"> Increase</button>
+                <button id="women-increase-btn" onclick="incrementWomen()"> Increase</button>
+
+            </div>
+
+            <div class="save-btn">
+                <button id="Save-men-women-btn" onclick="save()"> Save</button>
+                
+            </div>
+
+            <div class="decrement-btns">
+                <button id="men-decrease-btn" onclick="decreaseMen()"> Decrease</button>
+                <button id="women-decrease-btn" onclick="decreaseWomen()"> Decrease</button>
+            </div>
+
+  </section>
+
+
+    <hr>
+<section>
+            <h1>Total</h1>
+
+                <div class="total">
+                        <div id="men-total"> 
+                            <fieldset>
+                                <legend contenteditable="true">Total Men</legend>
+                                <h1 id="men-total-count"> 0 </h1>
+                            </fieldset>
+                        </div> 
+
+                
+                        <div id="women-total">
+                            <fieldset>
+                                <legend contenteditable="true">Total Women</legend>
+                                <h1 id="women-total-count"> 0 </h1>
+                            </fieldset>
+                            
+                        
+                         </div>
+                    
+                </div>
+
+                <br>
+                <div id="men-and-women-total">
+                        <fieldset>
+                            <legend contenteditable="true">Total men and women</legend>
+                            <h1 id="men-and-women-total-count"> 0 </h1>
+                        </fieldset>
+                </div>
+
+ </section>  
+
+
+    <hr>
+
+ <section>
+        
+                <h1> COMMENTS</h1>
+                <textarea id="remarks" type="text" > </textarea>
+            
+        
+
+
+ </section>  
+ 
+ <script src="index.js"></script>     
+  
+  </body>
+
+  <hr>
+
+  <footer>
+
+        <h4>LET'S CONNECT</h4>
+
+    <div class="social-icons">
+
+        <a href="https://web.facebook.com/lewis.zigede/" target="_blank">
+        <i class="fab fa-facebook-f"></i>
+        </a>
+        
+        <a href="https://twitter.com/lewis_zig/" target="_blank"> 
+        <i class="fab fa-twitter"></i>
+        </a>
+        
+    
+        <a href="https://www.linkedin.com/in/zigede-lewis-11b387131/" target="_blank"> 
+        <i class="fab fa-linkedin-in"></i>
+        </a>
+
+        <a href="https://github.com/ziglewis" target="_blank"> 
+            <i class="fab fa-github"></i>
+            </a>
+            </div>
+        
+    </div>
+
+  </footer>
+
+</main>
+
+
+
+
+
+  </html>
