@@ -140,7 +140,7 @@ fieldset{
     border-radius: 10px;
 }
 
-#remarks {
+.remarks {
     height: 6rem;
     width: 90%;
     margin: auto;
