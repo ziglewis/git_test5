@@ -77,6 +77,13 @@
        border: none;
        gap: 2%;
        margin: 1%;
+       background-image: url("back29.jpeg");
+       background-blend-mode: darken;
+       opacity: 0.9;
+       background-size: cover;
+       background-repeat: no-repeat;
+       font-size: larger;
+       font-weight: bold;
    }
 
    
@@ -107,6 +114,10 @@
     opacity: 0.9;
     background-size: cover;
     background-repeat: no-repeat;
+   }
+
+   #new-game:hover{
+    background-image: url("back24.jpeg")
    }
    
 
