@@ -120,6 +120,10 @@
    background-image: url("back24.jpeg")
   
    }
+
+   footer{
+    margin-top: 10%;
+   }
    
 
    .fab{
@@ -135,8 +139,8 @@
 
    .social-icons{
     display: flex;
-    gap: 5%;
-    margin: 5px auto 100px;
+    gap: 7%;
+    margin: 1% auto 100px;
    }
    
    @media (max-width : 800px) {
