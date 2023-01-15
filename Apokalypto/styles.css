@@ -91,7 +91,7 @@
        width: 45%;
        height:auto;
        font-size: large;
-       padding: 2%;
+       padding: 1%;
        border-radius: 20px;
        border: 2px solid rgba(5, 6, 71, 0.904);
        color: black;
@@ -117,7 +117,8 @@
    }
 
    #new-game:hover{
-    background-image: url("back24.jpeg")
+   background-image: url("back24.jpeg")
+  
    }
    
 
