@@ -136,7 +136,7 @@
    .social-icons{
     display: flex;
     gap: 5%;
-    margin: 0px auto 40px;
+    margin: 5px auto 100px;
    }
    
    @media (max-width : 800px) {
