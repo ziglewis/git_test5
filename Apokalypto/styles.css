@@ -148,8 +148,8 @@
        }
        
        .balls-set-1 button, .balls-set-2 button, .balls-set-3 button{
-       width: 4rem;
-       height: 4rem;
+       width: 3rem;
+       height: 3rem;
        gap: 2%; }
 
         }
