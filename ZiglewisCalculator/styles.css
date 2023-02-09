@@ -20,11 +20,11 @@ main{
     border: 10px solid gainsboro;
     margin: auto;
     padding: 0%;
-    background-image: url("back-33.jpg");
+   /* background-image: url("back-33.jpg");
     opacity: 0.95;
     background-size: cover;
-    background-repeat: no-repeat;
-    background-color: black ;
+    background-repeat: no-repeat; */
+    background-color: rgb(5, 5, 5) ;
 }
 
 #screen {
@@ -127,7 +127,7 @@ button:hover{
 @media (max-width:700px){
 
     Html{
-        background-color: black;
+        background-color: rgb(5, 5, 5);
     }
 
     main{
@@ -135,6 +135,10 @@ button:hover{
         margin: 0px;
         border: 2px solid gainsboro;
         box-sizing: border-box;
+        background-image: url("back-33.jpg");
+        opacity: 0.95;
+        background-size: cover;
+        background-repeat: no-repeat;
 }
 
     #screen {
