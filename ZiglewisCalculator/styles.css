@@ -9,8 +9,10 @@
 }
 
 html{
-    background-color: #779933;
-   /** background-color: rgba(223, 48, 17, 0.363); **/
+   background-image: url("back1.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: black;
 }
 
 main{
@@ -111,7 +113,7 @@ button:hover{
 
 .social-icons {
     display: flex;
-    gap: 3%;
+    gap: 7%;
     margin: 0px auto 10%;
     justify-content: center;
 }
