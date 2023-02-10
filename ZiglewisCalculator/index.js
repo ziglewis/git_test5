@@ -1,691 +1,600 @@
-
 //Jesus save me and keep me saved
-let display = document.getElementById("screen-letters")
-//console.log(display)
-let answer = document.getElementById("Answer")
 
-let deleteBtn = document.getElementById("delete-btn")
-let percentBtn = document.getElementById("percentage")
-let powerBtn = document.getElementById("raise-to-power")
-let clearBtn = document.getElementById("clear")
-let oneBtn = document.getElementById("key-1")
-let twoBtn = document.getElementById("key-2")
-let threeBtn = document.getElementById ("key-3")
-let fourBtn = document.getElementById ("key-4")
-let fiveBtn = document.getElementById ("key-5")
-let sixBtn = document.getElementById ("key-6")
-let sevenBtn = document.getElementById ("key-7")
-let eightBtn = document.getElementById ("key-8")
-let nineBtn = document.getElementById ("key-9")
-let zeroBtn = document.getElementById ("key-0")
-let pointBtn = document.getElementById ("point")
-let equalsBtn = document.getElementById("equal-to")
-let multiplyBtn = document.getElementById("multiply")
-let divideBtn = document.getElementById("divide")
-let subtractBtn = document.getElementById("subtract")
-let additionBtn = document.getElementById("addition")
-//let Btn = document.getElementById
-//let Btn = document.getElementById
+// below I interacted with the Dom to get all elements I needed to modify
+let display = document.getElementById("screen-letters");
+let answer = document.getElementById("Answer");
+let deleteBtn = document.getElementById("delete-btn");
+let percentBtn = document.getElementById("percentage");
+let powerBtn = document.getElementById("raise-to-power");
+let clearBtn = document.getElementById("clear");
+let oneBtn = document.getElementById("key-1");
+let twoBtn = document.getElementById("key-2");
+let threeBtn = document.getElementById("key-3");
+let fourBtn = document.getElementById("key-4");
+let fiveBtn = document.getElementById("key-5");
+let sixBtn = document.getElementById("key-6");
+let sevenBtn = document.getElementById("key-7");
+let eightBtn = document.getElementById("key-8");
+let nineBtn = document.getElementById("key-9");
+let zeroBtn = document.getElementById("key-0");
+let pointBtn = document.getElementById("point");
+let equalsBtn = document.getElementById("equal-to");
+let multiplyBtn = document.getElementById("multiply");
+let divideBtn = document.getElementById("divide");
+let subtractBtn = document.getElementById("subtract");
+let additionBtn = document.getElementById("addition");
 
-//console.log(rootBtn + percentBtn + powerBtn + clearBtn + oneBtn + twoBtn + threeBtn + fourBtn)
-//console.log(fiveBtn+sixBtn+sevenBtn+eightBtn+nineBtn+zeroBtn+ additionBtn)
-//console.log(pointBtn+equalsBtn+multiplyBtn+divideBtn+subtractBtn)
+//below I made declarations of all the variables I intend to use for this calculator
+let a = "";             //this will take the first augment for each calculation
+let b = "";              //this will take the second augment for each calculation
+let origin = "";         //this ensures everything initializes from a start
+let ans = "";            // this is the actual answer js will give me, it has no commas
+let ansWithComma = "";   // I used this to convert all answers to add comma via regex
+let saveOrigin = "";       //This will play roles in displays on the screen
+let saveCalcOrigin = "";   //This will play roles in displays on the screen
 
-let a = ""
-let b = ""
-let origin = ""
-let ans = ""
-let ansWithComma = "" 
-let saveOrigin = ""
-let saveCalcOrigin = ""
 
- let divisionX = false
- let multiplicationX = false
- let additionX = false
- let subtractionX = false
- let  powerX = false
- let  percentageX = false
- let operand = false
- let equalsX = false
- 
- function disableAllFunctions() {
-      divisionX = false
- multiplicationX = false
- additionX = false
- subtractionX = false
-  powerX = false
-  percentageX = false
-  operand = false
-  equalsX = false
-  
-     
- }
- 
- //toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");   adds comma to a number by regex
+// I am using booleans to initialize all functions to false, so they kind of remain dormant when not called
+let divisionX = false;
+let multiplicationX = false;
+let additionX = false;
+let subtractionX = false;
+let powerX = false;
+let percentageX = false;
+let operand = false;
+let equalsX = false;
+
+// I am creating a function I intend that whenever it is called, it will strictly disable all functions, so I don't have to repeat codes bearing in mind DRY(Don't repeat yourself)
+
+function disableAllFunctions() {
+  divisionX = false;
+  multiplicationX = false;
+  additionX = false;
+  subtractionX = false;
+  powerX = false;
+  percentageX = false;
+  operand = false;
+  equalsX = false;
+}
+
+// Here I am actually writing what I want from each function
+// just note or ignore this.... I found it from google....toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");   adds comma to a number by regex
+
 function multiply() {
-    
-    
-    ans = (a * b).toFixed(3)
-    console.log(ans)
-    a = ans
-    disableAllFunctions()
+  ans = (a * b).toFixed(3); // to.fixed will give me three decimal places as I set it to 3
+  console.log(ans);
+  a = ans;
+  disableAllFunctions();  // I meant this line to disable all functions after an operation has been done, this time multiply. I am disabling all at once as I don't want errors for forgetting to disable the right function. Therefore let everything go back to original state.
 }
 
 function division() {
-    
-    
-    ans = (a / b).toFixed(3)
-    console.log(ans)
-    a = ans
-    disableAllFunctions()
+  ans = (a / b).toFixed(3);
+  console.log(ans);
+  a = ans;
+  disableAllFunctions();
 }
 
 function addition() {
-    
-    
-    ans= (a + b).toFixed(3)
-    console.log(ans)
-    a = ans
-    disableAllFunctions()
+  ans = (a + b).toFixed(3);
+  console.log(ans);
+  a = ans;
+  disableAllFunctions();
 }
 
 function raiseToPower() {
-    
-    
-    ans = (a ** b).toFixed(3)
-    console.log(ans)
-    a = ans
-    disableAllFunctions()
+  ans = (a ** b).toFixed(3);
+  console.log(ans);
+  a = ans;
+  disableAllFunctions();
 }
 
 function percent() {
-    
-    
-    step1 = b/100 
-    ans = (step1 * a).toFixed(3)
-    console.log(ans)
-    a = ans
-    disableAllFunctions()
+  step1 = b / 100;
+  ans = (step1 * a).toFixed(3);
+  console.log(ans);
+  a = ans;
+  disableAllFunctions();
 }
-
 
 function subtraction() {
-    
-    
-    ans = (a - b).toFixed(3)
-    console.log(ans)
-    a = ans
-    disableAllFunctions()
+  ans = (a - b).toFixed(3);
+  console.log(ans);
+  a = ans;
+  disableAllFunctions();
 }
 
 
+//this function main() is the mother function of this whole project, it decides which operation or function to call.
+
+function main() {
+  origin = "stop";  //I am setting origin to stop to help me have an if statement that will combine with  operand = true ("see line 141") to stop any function button to call a function when a second augment is not given yet. The functions will just not work. Un till the user inputs a second augment.
+  saveOrigin = "";
+  if (a === "") {
+    a = display.innerText.replace(/\,/g, ""); // this converts the obtained data to a string, so in the next line I will convert it to a number Js can work with mathematically.
+    a = Number(a);
+  } else {
+    b = display.innerText.replace(/\,/g, "");
+    b = Number(b);
 
 
-
-function main(){
-    origin = "stop"
-    saveOrigin = ""
-    if (a=== ""){
-        
-        a = display.innerText.replace(/\,/g,''); // this converts to a string, so convert it to number
-        a = Number(a)
-    
-      }
-      
-      else{ 
-          
-           b = display.innerText.replace(/\,/g,'');
-           b = Number(b)
-
-        // b = Number(display.innerText) 
-        
-         
-         if (multiplicationX === true){
-             multiply()
-         }
-         else if (additionX === true) {
-             addition()
-         }
-         
-         else if (subtractionX === true) {
-             subtraction()
-             
-         }
-          else if (powerX === true){
-             raiseToPower()
-         }
-         
-          else if (percentageX === true) {
-             percent()
-             
-         }
-         
-         else  {division()
-         }
-         
-          }
-          
-}
-
-
-
-multiplyBtn.addEventListener("click", function(){
-    
-    if (operand === true &&  origin === "stop"){return}
-    if (origin === ""){
-        return
+    // After a and b values are obtained from the upper half of my code, these if statements below now determines which function is true and calls for it. This is the essence of the initial booleans I set to false and the disable all function.(see line 38 to 58)
+    if (multiplicationX === true) {
+      multiply();
+    } else if (additionX === true) {
+      addition();
+    } else if (subtractionX === true) {
+      subtraction();
+    } else if (powerX === true) {
+      raiseToPower();
+    } else if (percentageX === true) {
+      percent();
+    } else {
+      division();
     }
-    
-    else{
- 
-    main() 
-     multiplicationX = true
-     operand = true
-    
-    if ( ans === ""){
-    answer.textContent += " * "
-     ansWithComma = ans.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-     display.textContent = ansWithComma
-     }
-     else {
-           ansWithComma = ans.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-          answer.textContent = ansWithComma + " * "
-    display.textContent = ansWithComma
-         
-     }
-    
+  }
+} //my main function ends here
+
+
+// below I am adding event listeners to all my function buttons first, so they could trigger a function when clicked... I tried calling all the buttons at once but i ws not familiar with the "querryselectall", but definitely next time I will.
+
+multiplyBtn.addEventListener("click", function () {
+  if (operand === true && origin === "stop") {
+    return; //writing return statements as only it "return;" makes an operation to do absolutely nothing. That means all things remains as they were.
+  }
+  if (origin === "") {
+    return;
+  } else {
+    main();
+    multiplicationX = true;
+    operand = true;
+
+    if (ans === "") {
+      answer.textContent += " * ";
+      ansWithComma = ans.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+      display.textContent = ansWithComma;
+    } else {
+      ansWithComma = ans.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+      answer.textContent = ansWithComma + " * ";
+      display.textContent = ansWithComma;
     }
-    
- })
- 
+  }
+});
+
+divideBtn.addEventListener("click", function () {
+  if (operand === true && origin === "stop") {
+    return;
+  }
+  if (origin === "") {
+    return;
+  } else {
+    main();
+    divisionX = true;
+    operand = true;
+
+    if (ans === "") {
+      answer.textContent += " ÷ ";
+      ansWithComma = ans.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+      display.textContent = ansWithComma;
+    } else {
+      ansWithComma = ans.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+      answer.textContent = ansWithComma + " ÷ ";
+      display.textContent = ansWithComma;
+    }
+  }
+});
+subtractBtn.addEventListener("click", function () {
+  if (operand === true && origin === "stop") {
+    return;
+  }
+
+  if (origin === "") {
+    return;
+  } else {
+    main();
+    subtractionX = true;
+    operand = true;
+
+    if (ans === "") {
+      answer.textContent += " - ";
+      ansWithComma = ans.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+      display.textContent = ansWithComma;
+    } else {
+      ansWithComma = ans.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+      answer.textContent = ansWithComma + " - ";
+      display.textContent = ansWithComma;
+    }
+  }
+});
+additionBtn.addEventListener("click", function () {
+  if (operand === true && origin === "stop") {
+    return;
+  }
+
+  if (origin === "") {
+    return;
+  } else {
+    main();
+    additionX = true;
+    operand = true;
+
+    if (ans === "") {
+      answer.textContent += " + ";
+      ansWithComma = ans.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+      display.textContent = ansWithComma;
+    } else {
+      ansWithComma = ans.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+      answer.textContent = ansWithComma + " + ";
+      display.textContent = ansWithComma;
+    }
+  }
+});
+
+deleteBtn.addEventListener("click", function () {
+  display.textContent = "";
+  answer.textContent = "New Calc: ";
+  disableAllFunctions();
+  a = "";
+  b = "";
+  origin = "";
+  ans = "";
+  origin = "";
+  ansWithComma = "";
+  saveOrigin = "";
+});
+percentBtn.addEventListener("click", function () {
+  if (operand === true && origin === "stop") {
+    return;
+  }
+
+  if (origin === "") {
+    return;
+  } else {
+    main();
+    percentageX = true;
+    operand = true;
+
+    if (ans === "") {
+      answer.textContent += " % ";
+      ansWithComma = ans.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+      display.textContent = ansWithComma;
+    } else {
+      ansWithComma = ans.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+      answer.textContent = ansWithComma + " % ";
+      display.textContent = ansWithComma;
+    }
+  }
+});
+
+powerBtn.addEventListener("click", function () {
   
+  if (operand === true && origin === "stop") {
+    return;
+  }
 
- divideBtn.addEventListener("click", function(){
-    if (operand === true &&  origin === "stop"){return}
-    if (origin === ""){
-        return
+  if (origin === "") {
+    return;
+  } else {
+    main();
+    powerX = true;
+    operand = true;
+
+    if (ans === "") {
+      answer.textContent += " ^ ";
+      ansWithComma = ans.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+      display.textContent = ansWithComma;
+    } else {
+      ansWithComma = ans.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+      answer.textContent = ansWithComma + " ^ ";
+      display.textContent = ansWithComma;
     }
-    
-    else{
-    main() 
-      divisionX = true
-      operand = true
-    
-    
-    if ( ans === ""){
-    answer.textContent += " ÷ "
-     ansWithComma = ans.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-     display.textContent = ansWithComma
-     }
-     else {
-           ansWithComma = ans.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-          answer.textContent = ansWithComma + " ÷ "
-    display.textContent = ansWithComma
-         
-         
-     }
-     
-    }
-    
- }) 
- subtractBtn.addEventListener("click", function(){
-    if (operand === true &&  origin === "stop"){return}
-      
-    if (origin === ""){
-        return
-    }
-    
-    else{
-    main() 
-    subtractionX = true
-    operand = true
-   
-   if ( ans === ""){
-    answer.textContent += " - "
-     ansWithComma = ans.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-     display.textContent = ansWithComma
-     }
-     else {
-           ansWithComma = ans.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-          answer.textContent = ansWithComma + " - "
-    display.textContent = ansWithComma
-         
-     }
-     
-    }
+  }
+});
+clearBtn.addEventListener("click", function () {
+  if (display.textContent === "") {
+    return;
+  } else if (display.textContent === ansWithComma) {
+    display.textContent = "";
+    answer.textContent = "New Calc: ";
+    disableAllFunctions();
+    a = "";
+    b = "";
+    origin = "";
+    ans = "";
+    origin = "";
+    ansWithComma = "";
+    saveOrigin = "";
+  } else {
+    display.textContent = display.textContent.substring(
+      0,
+      display.textContent.length - 1
+    );
+    saveOrigin = saveOrigin.substring(0, saveOrigin.length - 1);
+    display.textContent = saveOrigin;
+    answer.textContent = answer.textContent.substring(
+      0,
+      answer.textContent.length - 1
+    );
+  }
+});
 
- }) 
- additionBtn.addEventListener("click", function(){
-    if (operand === true &&  origin === "stop"){return}
+clearBtn.addEventListener("dblclick", function () {
+  display.textContent = "";
+  answer.textContent = "New Calc: ";
+  disableAllFunctions();
+  a = "";
+  b = "";
+  origin = "";
+  ans = "";
+  origin = "";
+  ansWithComma = "";
+  saveOrigin = "";
+});
 
-    if (origin === ""){
-        return
-    }
-    
-    else{
-    main() 
-    additionX = true
-    operand = true
-    
-    if ( ans === ""){
-    answer.textContent += " + "
-     ansWithComma = ans.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-     display.textContent = ansWithComma
-     }
-     else {
-           ansWithComma = ans.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-          answer.textContent = ansWithComma + " + "
-    display.textContent = ansWithComma
-         
-     }
-     
-    }
- }) 
+equalsBtn.addEventListener("click", function () {
+  main();
+
+  if (ans === "") {
+    answer.textContent = answer.textContent;
+    display.textContent = display.textContent;
+  } else {
+    ansWithComma = ans.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    answer.textContent = ansWithComma;
+    display.textContent = ansWithComma;
+  }
+
+  disableAllFunctions();
+  ans = "";
+  a = "";
+  equalsX = true;
+});
+
+//below I am adding event listeners to all my number buttons first, so they could give of a value when clicked... I tried calling all the number buttons at once but I was not familiar with the "querryselectall", but definitely next time I will. Also I should have used ".value property" but I don't want to take any chances, so i declared a value for all the number buttons
 
 
- deleteBtn.addEventListener("click", function(){
 
-    display.textContent = ""
-    answer.textContent = "New Calc: "
-    disableAllFunctions()
-    a = ""
-    b = ""
-    origin = ""
-    ans = ""
-     origin = ""
-    ansWithComma = "" 
-    saveOrigin = ""
+// this function answerDisplay() controls  what you see  on the screen part, its a reusable function. I used it to convert to string and then remove the commas for JS to be able to work with the values from the screen as numbers. This function is very vital as well.
+function answerDisplay() {
+  if (display.textContent === answer.textContent && equalsX === true) {
+    saveCalcOrigin = "";
+    saveCalcOrigin = origin;
+    answer.textContent = saveCalcOrigin
+      .toString()
+      .replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    equalsX = false;
+  } else if (ans === "") {
+    saveCalcOrigin = "";
+    saveCalcOrigin += origin;
+    answer.textContent += saveCalcOrigin
+      .toString()
+      .replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+  }
+}
+ //I know my code should have ended on line 390, had I grabbed hold of all the number buttons using 'query select all' dom selector then implementing 'dot value'. Well, I will still do this and if it works, I will update this code again, but of course it should work.
+oneBtn.addEventListener("click", function () {
 
- 
- 
-     
-    
- })
- percentBtn.addEventListener("click", function(){
-    if (operand === true &&  origin === "stop"){return}
-
-    if (origin === ""){
-        return
-    }
-    
-    else{
-            main() 
-    percentageX = true
-    operand = true
-    
-   if ( ans === ""){
-    answer.textContent += " % "
-     ansWithComma = ans.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-     display.textContent = ansWithComma
-     }
-     else {
-           ansWithComma = ans.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-          answer.textContent = ansWithComma + " % "
-    display.textContent = ansWithComma
-     }   
-    
-    }
-
- }) 
- 
- 
- powerBtn.addEventListener("click", function(){
-   // if (answer.textContent.includes("^") &&  origin === "stop"){return}
-   if (operand === true &&  origin === "stop"){return}
-
-     if (origin === ""){
-         return
-     }
-     
-     else{
-        main() 
-    powerX = true
-    operand = true
-
-  if ( ans === ""){
-    answer.textContent += " ^ "
-     ansWithComma = ans.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-     display.textContent = ansWithComma
-     }
-     else {
-           ansWithComma = ans.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-          answer.textContent = ansWithComma + " ^ "
-    display.textContent = ansWithComma
-     }
-     
-     }
-     
-    
- }) 
- clearBtn.addEventListener("click", function(){
-     
-    if (display.textContent === "") {return}
-    else if (display.textContent === ansWithComma){
-        display.textContent = ""
-    answer.textContent = "New Calc: "
-    disableAllFunctions()
-    a = ""
-    b = ""
-    origin = ""
-    ans = ""
-     origin = ""
-    ansWithComma = "" 
-    saveOrigin = ""
-
-    }
-
-    else{
-    display.textContent = display.textContent.substring(0, display.textContent.length-1)
-    saveOrigin = saveOrigin.substring(0, saveOrigin.length-1)
+  if (ans === "") {
+    origin = 1;
+    answerDisplay();
+    saveOrigin += origin;
     display.textContent = saveOrigin
-    answer.textContent = answer.textContent.substring(0, answer.textContent.length-1)
-    }
-
- })
-
- clearBtn.addEventListener("dblclick", function(){ 
-    display.textContent = ""
-    answer.textContent = "New Calc: "
-    disableAllFunctions()
-    a = ""
-    b = ""
-    origin = ""
-    ans = ""
-    origin = ""
-    ansWithComma = "" 
-    saveOrigin = ""
-
-
- })
- 
- 
- equalsBtn.addEventListener("click", function(){
-      
-      main()
-      
-        if ( ans === ""){
-    answer.textContent = answer.textContent
-    display.textContent = display.textContent
-     }
-    else {
-           ansWithComma = ans.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-          answer.textContent = ansWithComma
-    display.textContent = ansWithComma
-          
-         
-     }
-    
-      
-         disableAllFunctions()
-     ans = ""
-     a = ""
-     equalsX = true
- })
- 
-  //numbers
-  function answerDisplay(){
+      .toString()
+      .replace(/\B(?=(\d{3})+(?!\d))/g, ",");
    
-    if (display.textContent === answer.textContent && equalsX === true ) { 
-        saveCalcOrigin = ""
-        saveCalcOrigin = origin
-        answer.textContent = saveCalcOrigin.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")
-        equalsX = false
+  } else {
+    ans = "";
+    origin = 1;
+    answerDisplay();
+    saveOrigin += origin;
+    display.textContent = saveOrigin
+      .toString()
+      .replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+  }
+});
+twoBtn.addEventListener("click", function () {
+  if (ans === "") {
+    origin = 2;
+    answerDisplay();
+    saveOrigin += origin;
+    display.textContent = saveOrigin
+      .toString()
+      .replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+  } else {
+    display.textContent = "";
+    ans = "";
+    origin = 2;
+    answerDisplay();
+    saveOrigin += origin;
+    display.textContent = saveOrigin
+      .toString()
+      .replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+  }
+
+});
+
+
+threeBtn.addEventListener("click", function () {
+  if (ans === "") {
+    origin = 3;
+    answerDisplay();
+    saveOrigin += origin;
+    display.textContent = saveOrigin
+      .toString()
+      .replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+  } else {
+    display.textContent = "";
+    ans = "";
+    origin = 3;
+    answerDisplay();
+    saveOrigin += origin;
+    display.textContent = saveOrigin
+      .toString()
+      .replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+}
+});
+
+ 
+fourBtn.addEventListener("click", function () {
+  if (ans === "") {
+    origin = 4;
+    answerDisplay();
+    saveOrigin += origin;
+    display.textContent = saveOrigin
+      .toString()
+      .replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+  } else {
+    display.textContent = "";
+    ans = "";
+    origin = 4;
+    answerDisplay();
+    saveOrigin += origin;
+    display.textContent = saveOrigin
+      .toString()
+      .replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+  }
+});
+fiveBtn.addEventListener("click", function () {
+  if (ans === "") {
+    origin = 5;
+    answerDisplay();
+    saveOrigin += origin;
+    display.textContent = saveOrigin
+      .toString()
+      .replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+  } else {
+    display.textContent = "";
+    ans = "";
+    origin = 5;
+    answerDisplay();
+    saveOrigin += origin;
+    display.textContent = saveOrigin
+      .toString()
+      .replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+  }
+});
+sixBtn.addEventListener("click", function () {
+  if (ans === "") {
+    origin = 6;
+    answerDisplay();
+    saveOrigin += origin;
+    display.textContent = saveOrigin
+      .toString()
+      .replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+  } else {
+    display.textContent = "";
+    ans = "";
+    origin = 6;
+    answerDisplay();
+    saveOrigin += origin;
+    display.textContent = saveOrigin
+      .toString()
+      .replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+  }
+});
+sevenBtn.addEventListener("click", function () {
+  if (ans === "") {
+    origin = 7;
+    answerDisplay();
+    saveOrigin += origin;
+    display.textContent = saveOrigin
+      .toString()
+      .replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+  } else {
+    display.textContent = "";
+    ans = "";
+    origin = 7;
+    answerDisplay();
+    saveOrigin += origin;
+    display.textContent = saveOrigin
+      .toString()
+      .replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+  }
+});
+eightBtn.addEventListener("click", function () {
+  if (ans === "") {
+    origin = 8;
+    answerDisplay();
+    saveOrigin += origin;
+    display.textContent = saveOrigin
+      .toString()
+      .replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+  } else {
+    display.textContent = "";
+    ans = "";
+    origin = 8;
+    answerDisplay();
+    saveOrigin += origin;
+    display.textContent = saveOrigin
+      .toString()
+      .replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+  }
+});
+nineBtn.addEventListener("click", function () {
+  if (ans === "") {
+    origin = 9;
+    answerDisplay();
+    saveOrigin += origin;
+    display.textContent = saveOrigin
+      .toString()
+      .replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+  } else {
+    display.textContent = "";
+    ans = "";
+    origin = 9;
+    answerDisplay();
+    saveOrigin += origin;
+    display.textContent = saveOrigin
+      .toString()
+      .replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+  }
+});
+zeroBtn.addEventListener("click", function () {
+  if (ans === "") {
+    origin = 0;
+    answerDisplay();
+    saveOrigin += origin;
+    display.textContent = saveOrigin
+      .toString()
+      .replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+  } else {
+    display.textContent = "";
+    ans = "";
+    origin = 0;
+    answerDisplay();
+    saveOrigin += origin;
+    display.textContent = saveOrigin
+      .toString()
+      .replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+  }
+});
+
+pointBtn.addEventListener("click", function () {
+
+  if (display.textContent.includes(".")) {
+    return;
+  }
+
+  if (a === "" && origin === "") {
+    origin = "0.";
+    answerDisplay();
+    saveOrigin += origin;
+    display.textContent = saveOrigin
+      .toString()
+      .replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+  } else if (a != "" && origin === "") {
+    origin = "0.";
+    answerDisplay();
+    saveOrigin += origin;
+    display.textContent = saveOrigin
+      .toString()
+      .replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+  } else {
+    if (ans === "") {
+      origin = ".";
+      answerDisplay();
+      saveOrigin += origin;
+      display.textContent = saveOrigin
+        .toString()
+        .replace(/\B(?=(\d{3})+(?!\d))/g, ",");
     }
-    else if (ans === ""){ 
-        saveCalcOrigin = ""
-        saveCalcOrigin += origin
-        answer.textContent += saveCalcOrigin.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")
-    }
-
-    }
-
-  
- oneBtn.addEventListener("click", function(){
-   // saveCalcOrigin = ""
-    if (ans === ""){ 
-     origin = 1
-     answerDisplay()
-     saveOrigin += origin
-     //saveCalcOrigin += origin
-      //answer.textContent += saveCalcOrigin.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-     display.textContent = saveOrigin.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-    // console.log(typeof(origin))
-      } 
-     
-     else {
-
-       
-         ans = ""
-     origin = 1
-     answerDisplay()
-     saveOrigin += origin
-      //answer.textContent += saveOrigin.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-     display.textContent = saveOrigin.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-     }
- }) 
- twoBtn.addEventListener("click", function(){
-     
-   // saveCalcOrigin = ""
-    if (ans === ""){ 
-     origin = 2
-     answerDisplay()
-     saveOrigin += origin
-     //saveCalcOrigin += origin
-     // answer.textContent += saveCalcOrigin.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-     display.textContent = saveOrigin.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","); } 
-     
-     else {
-         display.textContent = ""
-         ans = ""
-     origin = 2
-     answerDisplay()
-     saveOrigin += origin
-      //answer.textContent = saveOrigin.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-     display.textContent = saveOrigin.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-     }
-
-    //  origin = twoBtn.textContent //textContent returns everything in a text both script, css , hidden characters etc.
-     }) 
-     
-    
-
- threeBtn.addEventListener("click", function(){
-     
-   
-    if (ans === ""){ 
-     origin = 3
-     answerDisplay()
-     saveOrigin += origin
-     display.textContent = saveOrigin.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");} 
-     
-     else {
-         display.textContent = ""
-         ans = ""
-     origin = 3
-     answerDisplay()
-     saveOrigin += origin
-      //answer.textContent = saveOrigin.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-     display.textContent = saveOrigin.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-     }
-     // origin = threeBtn.innerText  // innerText only returns human readable contents and avoids other contents like scripts and hidden contents
-
- }) 
- fourBtn.addEventListener("click", function(){
-     if (ans === ""){ 
-     origin = 4
-     answerDisplay()
-     saveOrigin += origin
-     // answer.textContent = saveOrigin.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-     display.textContent = saveOrigin.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","); } 
-     
-     else {
-         display.textContent = ""
-         ans = ""
-     origin = 4
-     answerDisplay()
-     saveOrigin += origin
-      //answer.textContent = saveOrigin.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-     display.textContent = saveOrigin.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-     }
-    
- }) 
- fiveBtn.addEventListener("click", function(){
-       if (ans === ""){ 
-     origin = 5
-     answerDisplay()
-     saveOrigin += origin
-     // answer.textContent = saveOrigin.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-     display.textContent = saveOrigin.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","); } 
-     
-     else {
-         display.textContent = ""
-         ans = ""
-     origin = 5
-     answerDisplay()
-     saveOrigin += origin
-      //answer.textContent = saveOrigin.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-     display.textContent = saveOrigin.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-     }
-    
- }) 
- sixBtn.addEventListener("click", function(){
-      if (ans === ""){ 
-     origin = 6
-     answerDisplay()
-     saveOrigin += origin
-     // answer.textContent = saveOrigin.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-     display.textContent = saveOrigin.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-      } 
-     
-     else {
-         display.textContent = ""
-         ans = ""
-     origin = 6
-     answerDisplay()
-     saveOrigin += origin
-     // answer.textContent = saveOrigin.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-     display.textContent = saveOrigin.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-     }
-    
-    
- }) 
- sevenBtn.addEventListener("click", function(){
-    if (ans === ""){ 
-     origin = 7
-     answerDisplay()
-     saveOrigin += origin
-      //answer.textContent = saveOrigin.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-     display.textContent = saveOrigin.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-      } 
-     
-     else {
-         display.textContent = ""
-         ans = ""
-     origin = 7
-     answerDisplay()
-     saveOrigin += origin
-      //answer.textContent = saveOrigin.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-     display.textContent = saveOrigin.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-     }
-    
-    
- })
- eightBtn.addEventListener("click", function(){
-      if (ans === ""){ 
-     origin = 8
-     answerDisplay()
-     saveOrigin += origin
-      //answer.textContent = saveOrigin.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-     display.textContent = saveOrigin.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-      } 
-     
-     else {
-         display.textContent = ""
-         ans = ""
-     origin = 8
-     answerDisplay()
-    saveOrigin += origin
-      //answer.textContent = saveOrigin.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-     display.textContent = saveOrigin.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-     }
-    
-    
- }) 
- nineBtn.addEventListener("click", function(){
-      if (ans === ""){ 
-     origin = 9
-     answerDisplay()
-     saveOrigin += origin
-     // answer.textContent = saveOrigin.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-     display.textContent = saveOrigin.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-      } 
-     
-     else {
-         display.textContent = ""
-         ans = ""
-     origin = 9
-     answerDisplay()
-     saveOrigin += origin
-      //answer.textContent = saveOrigin.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-     display.textContent = saveOrigin.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-     }
-    
-    
- }) 
- zeroBtn.addEventListener("click", function(){
-      if (ans === ""){ 
-     origin = 0
-     answerDisplay()
-     saveOrigin += origin
-     // answer.textContent = saveOrigin.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-     display.textContent = saveOrigin.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","); } 
-     
-     else {
-         display.textContent = ""
-         ans = ""
-     origin = 0
-     answerDisplay()
-     saveOrigin += origin
-     // answer.textContent = saveOrigin.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-     display.textContent = saveOrigin.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-     }
-    
-    
- }) 
- pointBtn.addEventListener("click", function(){
-//for (i <= 1; i > 1; i++)
-     
-        if ( display.textContent.includes(".")){
-            return 
-        }
-
-    if (a === "" && origin === ""){
-        origin = "0."
-        answerDisplay()
-       saveOrigin += origin
-      //answer.textContent = saveOrigin.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-     display.textContent = saveOrigin.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-    }
-    
-   else if (a != "" && origin === ""){
-        origin = "0."
-        answerDisplay()
-     saveOrigin += origin
-      //answer.textContent = saveOrigin.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-     display.textContent = saveOrigin.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-    }
-    
-    else{
-    
-    
-     if (ans === ""){ 
-    origin = "."
-    answerDisplay()
-   saveOrigin += origin
-      //answer.textContent = saveOrigin.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-     display.textContent = saveOrigin.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","); } 
-
-     }
- }
- )
-
+  }
+});
