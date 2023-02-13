@@ -1,28 +1,28 @@
-//Jesus save me and keep me saved
+//Jesus saves me and keeps me safe
 
 // below I interacted with the Dom to get all elements I needed to modify
-let display = document.getElementById("screen-letters");
-let answer = document.getElementById("Answer");
-let deleteBtn = document.getElementById("delete-btn");
-let percentBtn = document.getElementById("percentage");
-let powerBtn = document.getElementById("raise-to-power");
-let clearBtn = document.getElementById("clear");
-let oneBtn = document.getElementById("key-1");
-let twoBtn = document.getElementById("key-2");
-let threeBtn = document.getElementById("key-3");
-let fourBtn = document.getElementById("key-4");
-let fiveBtn = document.getElementById("key-5");
-let sixBtn = document.getElementById("key-6");
-let sevenBtn = document.getElementById("key-7");
-let eightBtn = document.getElementById("key-8");
-let nineBtn = document.getElementById("key-9");
-let zeroBtn = document.getElementById("key-0");
-let pointBtn = document.getElementById("point");
-let equalsBtn = document.getElementById("equal-to");
-let multiplyBtn = document.getElementById("multiply");
-let divideBtn = document.getElementById("divide");
-let subtractBtn = document.getElementById("subtract");
-let additionBtn = document.getElementById("addition");
+const display = document.getElementById("screen-letters");
+const answer = document.getElementById("Answer");
+const deleteBtn = document.getElementById("delete-btn");
+const percentBtn = document.getElementById("percentage");
+const powerBtn = document.getElementById("raise-to-power");
+const clearBtn = document.getElementById("clear");
+const oneBtn = document.getElementById("key-1");
+const twoBtn = document.getElementById("key-2");
+const threeBtn = document.getElementById("key-3");
+const fourBtn = document.getElementById("key-4");
+const fiveBtn = document.getElementById("key-5");
+const sixBtn = document.getElementById("key-6");
+const sevenBtn = document.getElementById("key-7");
+const eightBtn = document.getElementById("key-8");
+const nineBtn = document.getElementById("key-9");
+const zeroBtn = document.getElementById("key-0");
+const pointBtn = document.getElementById("point");
+const equalsBtn = document.getElementById("equal-to");
+const multiplyBtn = document.getElementById("multiply");
+const divideBtn = document.getElementById("divide");
+const subtractBtn = document.getElementById("subtract");
+const additionBtn = document.getElementById("addition");
 
 //below I made declarations of all the variables I intend to use for this calculator
 let a = "";             //this will take the first augment for each calculation
@@ -331,7 +331,11 @@ clearBtn.addEventListener("dblclick", function () {
 });
 
 equalsBtn.addEventListener("click", function () {
-  main();
+  
+  if (operand === true && origin === "stop") {
+    return;
+  }else{ 
+  main();}
 
   if (ans === "") {
     answer.textContent = answer.textContent;
@@ -348,11 +352,10 @@ equalsBtn.addEventListener("click", function () {
   equalsX = true;
 });
 
-//below I am adding event listeners to all my number buttons first, so they could give of a value when clicked... I tried calling all the number buttons at once but I was not familiar with the "querryselectall", but definitely next time I will. Also I should have used ".value property" but I don't want to take any chances, so i declared a value for all the number buttons
+/* below I will be adding event listeners to all my number buttons, so they could give of a value when clicked... I tried calling all the number buttons at once but I was not familiar with the "querryselectall", but definitely next time I will. Also I should have used ".value property" but I don't want to take any chances, so i declared a value for all the number buttons
 
+this function "answerDisplay()" controls  what you see  on the screen part, it's a reusable function. I used it to convert to string and then remove the commas for JS to be able to work with the values from the screen as numbers. This function is very vital as well. */
 
-
-// this function answerDisplay() controls  what you see  on the screen part, its a reusable function. I used it to convert to string and then remove the commas for JS to be able to work with the values from the screen as numbers. This function is very vital as well.
 function answerDisplay() {
   if (display.textContent === answer.textContent && equalsX === true) {
     saveCalcOrigin = "";
@@ -369,202 +372,75 @@ function answerDisplay() {
       .replace(/\B(?=(\d{3})+(?!\d))/g, ",");
   }
 }
- //I know my code should have ended on line 390, had I grabbed hold of all the number buttons using 'query select all' dom selector then implementing 'dot value'. Well, I will still do this and if it works, I will update this code again, but of course it should work.
+ //I know my code can be shorter at this point, had I grabbed hold of all the number buttons using 'document.querySelectorAll("");' dom selector then implementing 'dot value'. Well, I will still do this and if it works, I will update this code again, but of course it should work.
+
+//This function button operator will control the actions of each number button when they are called. Its a reusable function.
+function buttonOperator(){
+  if (ans === "") {
+    answerDisplay();
+    saveOrigin += origin;
+    display.textContent = saveOrigin
+      .toString()
+      .replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+  } else {
+    ans = "";
+    answerDisplay();
+    saveOrigin += origin;
+    display.textContent = saveOrigin
+      .toString()
+      .replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+  }
+};
+
+//The number buttons event listeners starts here.
 oneBtn.addEventListener("click", function () {
-
-  if (ans === "") {
     origin = 1;
-    answerDisplay();
-    saveOrigin += origin;
-    display.textContent = saveOrigin
-      .toString()
-      .replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-   
-  } else {
-    ans = "";
-    origin = 1;
-    answerDisplay();
-    saveOrigin += origin;
-    display.textContent = saveOrigin
-      .toString()
-      .replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-  }
+    buttonOperator();
 });
+
 twoBtn.addEventListener("click", function () {
-  if (ans === "") {
-    origin = 2;
-    answerDisplay();
-    saveOrigin += origin;
-    display.textContent = saveOrigin
-      .toString()
-      .replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-  } else {
-    display.textContent = "";
-    ans = "";
-    origin = 2;
-    answerDisplay();
-    saveOrigin += origin;
-    display.textContent = saveOrigin
-      .toString()
-      .replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-  }
-
+  origin = 2;
+    buttonOperator();
 });
-
 
 threeBtn.addEventListener("click", function () {
-  if (ans === "") {
-    origin = 3;
-    answerDisplay();
-    saveOrigin += origin;
-    display.textContent = saveOrigin
-      .toString()
-      .replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-  } else {
-    display.textContent = "";
-    ans = "";
-    origin = 3;
-    answerDisplay();
-    saveOrigin += origin;
-    display.textContent = saveOrigin
-      .toString()
-      .replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-}
+  origin = 3;
+    buttonOperator();
 });
-
  
 fourBtn.addEventListener("click", function () {
-  if (ans === "") {
-    origin = 4;
-    answerDisplay();
-    saveOrigin += origin;
-    display.textContent = saveOrigin
-      .toString()
-      .replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-  } else {
-    display.textContent = "";
-    ans = "";
-    origin = 4;
-    answerDisplay();
-    saveOrigin += origin;
-    display.textContent = saveOrigin
-      .toString()
-      .replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-  }
+origin = 4
+buttonOperator();  
 });
+
 fiveBtn.addEventListener("click", function () {
-  if (ans === "") {
-    origin = 5;
-    answerDisplay();
-    saveOrigin += origin;
-    display.textContent = saveOrigin
-      .toString()
-      .replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-  } else {
-    display.textContent = "";
-    ans = "";
-    origin = 5;
-    answerDisplay();
-    saveOrigin += origin;
-    display.textContent = saveOrigin
-      .toString()
-      .replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-  }
+origin = 5
+buttonOperator(); 
 });
+
 sixBtn.addEventListener("click", function () {
-  if (ans === "") {
-    origin = 6;
-    answerDisplay();
-    saveOrigin += origin;
-    display.textContent = saveOrigin
-      .toString()
-      .replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-  } else {
-    display.textContent = "";
-    ans = "";
-    origin = 6;
-    answerDisplay();
-    saveOrigin += origin;
-    display.textContent = saveOrigin
-      .toString()
-      .replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-  }
+  origin = 6
+  buttonOperator();
 });
+
 sevenBtn.addEventListener("click", function () {
-  if (ans === "") {
-    origin = 7;
-    answerDisplay();
-    saveOrigin += origin;
-    display.textContent = saveOrigin
-      .toString()
-      .replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-  } else {
-    display.textContent = "";
-    ans = "";
-    origin = 7;
-    answerDisplay();
-    saveOrigin += origin;
-    display.textContent = saveOrigin
-      .toString()
-      .replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-  }
+  origin = 7
+  buttonOperator();
 });
+
 eightBtn.addEventListener("click", function () {
-  if (ans === "") {
-    origin = 8;
-    answerDisplay();
-    saveOrigin += origin;
-    display.textContent = saveOrigin
-      .toString()
-      .replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-  } else {
-    display.textContent = "";
-    ans = "";
-    origin = 8;
-    answerDisplay();
-    saveOrigin += origin;
-    display.textContent = saveOrigin
-      .toString()
-      .replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-  }
-});
+  origin = 8
+  buttonOperator();
+  });
+
 nineBtn.addEventListener("click", function () {
-  if (ans === "") {
-    origin = 9;
-    answerDisplay();
-    saveOrigin += origin;
-    display.textContent = saveOrigin
-      .toString()
-      .replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-  } else {
-    display.textContent = "";
-    ans = "";
-    origin = 9;
-    answerDisplay();
-    saveOrigin += origin;
-    display.textContent = saveOrigin
-      .toString()
-      .replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-  }
+origin = 9
+buttonOperator(); 
 });
+
 zeroBtn.addEventListener("click", function () {
-  if (ans === "") {
-    origin = 0;
-    answerDisplay();
-    saveOrigin += origin;
-    display.textContent = saveOrigin
-      .toString()
-      .replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-  } else {
-    display.textContent = "";
-    ans = "";
-    origin = 0;
-    answerDisplay();
-    saveOrigin += origin;
-    display.textContent = saveOrigin
-      .toString()
-      .replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-  }
+  origin = 0
+  buttonOperator(); 
 });
 
 pointBtn.addEventListener("click", function () {
