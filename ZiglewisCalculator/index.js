@@ -162,22 +162,22 @@ multiplyBtn.addEventListener("click", function () {
 
 divideBtn.addEventListener("click", function () {
   if (operand === true && origin === "stop") {
-    return;
+    return;  // This code ensures that when an operand is true and no second augment is given yet, then the user decides to click on any other function key again, nothing will happen. I used it through out all my function button keys.
   }
-  if (origin === "") {
-    return;
+  if (origin === "") { 
+    return;  //This code ensures that the user just cant start a calculation with a function key e.g *2 or ^2 or %2 etc. I used over all function button.
   } else {
     main();
-    divisionX = true;
+    divisionX = true; // this code keeps a selected operation true so when "b" the second augment is passed, my  "main()" function considering her second half will be able to choose what will be done by finding which operation is true. I set this over all functions, but making it respective to each i.e if it is divide, divideX operation should be true, if it is multiply, multiplyX operation should be true and so on.
     operand = true;
 
     if (ans === "") {
-      answer.textContent += " ÷ ";
+      answer.textContent += " ÷ "; // this appends  the symbol of your operand to the lower screen where the user get to see their expression the computer will execute. I used it all over function keys but making it respective to each operation.
       ansWithComma = ans.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-      display.textContent = ansWithComma;
+      display.textContent = ansWithComma; //These two lines of codes adds comma to the values you see on the bigger screen
     } else {
       ansWithComma = ans.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-      answer.textContent = ansWithComma + " ÷ ";
+      answer.textContent = ansWithComma + " ÷ ";      //Observe the difference between these if and else statement is on "answer.textcontent" if I don't have an answer yet, the if statement simply appends the operation symbol to what we have on display, but else an answer is now given and its showing on the upper screen, then the user clicks on a function, JS please take what you see as answer and append the operation symbol to it. I used this over all functions respectively.
       display.textContent = ansWithComma;
     }
   }
@@ -333,7 +333,7 @@ clearBtn.addEventListener("dblclick", function () {
 equalsBtn.addEventListener("click", function () {
   
   if (operand === true && origin === "stop") {
-    return;
+    return; // This code ensures that when an operand is true and no second augment is given then the user decides to click equals button, nothing will happen.
   }else{ 
   main();}
 
