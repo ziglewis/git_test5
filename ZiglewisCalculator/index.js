@@ -62,28 +62,24 @@ function disableAllFunctions() {
 
 function multiply() {
   ans = (a * b).toFixed(3); // to.fixed will give me three decimal places as I set it to 3
-  console.log(ans);
   a = ans;
   disableAllFunctions();  // I meant this line to disable all functions after an operation has been done, this time multiply. I am disabling all at once as I don't want errors for forgetting to disable the right function. Therefore let everything go back to original state.
 }
 
 function division() {
   ans = (a / b).toFixed(3);
-  console.log(ans);
   a = ans;
   disableAllFunctions();
 }
 
 function addition() {
   ans = (a + b).toFixed(3);
-  console.log(ans);
   a = ans;
   disableAllFunctions();
 }
 
 function raiseToPower() {
   ans = (a ** b).toFixed(3);
-  console.log(ans);
   a = ans;
   disableAllFunctions();
 }
@@ -91,14 +87,12 @@ function raiseToPower() {
 function percent() {
   step1 = b / 100;
   ans = (step1 * a).toFixed(3);
-  console.log(ans);
   a = ans;
   disableAllFunctions();
 }
 
 function subtraction() {
   ans = (a - b).toFixed(3);
-  console.log(ans);
   a = ans;
   disableAllFunctions();
 }
